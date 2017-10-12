@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+	
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+		<!--menu-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Mobile Specific Meta Tags -->
+		<meta name="viewport" content="width=1024, initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--menu-->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+		<!--<link rel="stylesheet" type="text/css" media="all" href="css/demo.css" />-->
+		<link rel="stylesheet" type="text/css" media="all" href="css/webslidemenu.css" />
+		<script type="text/javascript" language="javascript" src="js/webslidemenu.js"></script>
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+		
+        
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/jquery-ui.css" />
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>TeleprompterPAD</title>
+    
+	<script>
+
+    </script>
+    
+    </head>
+
+<body id="gui">
+<div class="wsmenucontainer clearfix">
+<div class="overlapblackbg">
+</div>
+   
+  <div class="header">
+    <div class="wrapper clearfix">
+    	
+        <a id="wsnavtoggle" class="animated-arrow"><span></span></a>
+    
+    <!--Main Menu HTML Code-->
+    <nav class="wsmenu clearfix green">
+      <ul class="mobile-sub wsmenu-list clearfix">
+      <li>
+      <div class="logoforwhite"><img src="images/dummy-logo.png" alt="" /> 
+      </div>
+      <!--<div class="logofordark"><img src="images/dummy-logo-for-darkbg.png" alt="" /> </div>-->
+      </li>
+        <li><a href="#" ><i class="fa fa-home"></i><span class="hometext">&nbsp;&nbsp;How to</span></a><!--class="active"-->
+          <ul class="wsmenu-submenu">
+          	<div class="wsmenu02text clearfix">
+            <p>Es muy fácil de usar:</p>
+          	<p>1-Escribe o abre un texto desde cualquier APP.</p>
+            <p>2-Copia y pega.</p>
+            </div>
+          </ul>        
+        </li>
+<!--        <li><a href="#"><i class="fa fa-align-justify"></i>&nbsp;&nbsp;Dropdowns <span class="arrow"></span></a>
+          <ul class="wsmenu-submenu">
+            <li><a href="#"><i class="fa fa-angle-right"></i>Website Design </a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i>Ecommerce Solutions</a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i>Website Development</a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i>Open Source Development</a>
+              <ul class="wsmenu-submenu-sub">
+                <li><a href="#"><i class="fa fa-angle-right"></i>Submenu item 1</a></li>
+               <li><a href="#"><i class="fa fa-angle-right"></i>Submenu item 3</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i>Submenu item 4</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>-->
+        <li><a href="#"><i class="fa fa-info-circle"></i>&nbsp;&nbsp;Opciones <span class="arrow"></span></a>
+        		<ul class="wsmenu-submenu">
+        			<li><i class="fa fa-angle-right"></i><label class="font_size_label">Font Size <span>(60)</span>:&nbsp;</label></li>
+                	<li>
+                    <div class="sliders">
+						<div class="font_size slider"></div>
+                	</div>
+                    </li>
+                     
+        			<li><i class="fa fa-angle-right"></i><label class="speed_label">Speed <span>(35)</span>:&nbsp;</label></li> 
+                	<li>
+                    <div class="sliders"><!---->
+						<div class="speed slider"></div>
+                	</div>
+                    </li>
+                    <div class="buttons">
+					<li><i class="fa fa-angle-right"></i>Mirror X <a class="button small mirror icon-text-width flipx" href="#" onclick="return false;"></a></li>
+					<li><i class="fa fa-angle-right"></i>Mirror Y <a class="button small mirror icon-text-height flipy" href="#" onclick="return false;"></a></li>
+					</div>                                 
+                </ul>
+        </li>     
+        <li><a href="#"><i class="fa fa-cogs"></i>&nbsp;&nbsp;Productos<span class="arrow"></span></a></li>
+        <li><a href="#"><i class="fa fa-question-circle"></i>&nbsp;&nbsp;Acerca de<span class="arrow"></span></a></li>
+<!--        <li><a href="#"><i class="fa fa-paper-plane"></i>&nbsp;&nbsp;Contact Us <span class="arrow"></span></a>
+          <div class="megamenu halfdiv">
+            <h3 class="title">Contact Us</h3>
+            <form name="contact_name" class="menu_form">
+              <input type="text" placeholder="Name">
+              <input type="text" placeholder="Email">
+              <textarea placeholder="Your message..."></textarea>
+              <input type="button" value="Reset">
+              <input type="submit" value="Send">
+            </form>
+          </div> <!--megamenu halfdiv-->
+        </li>-->
+      </ul>
+    </nav>
+    </div> <!--wrapper clearfix-->
+  </div> <!--header-->
+</div> <!--wsmenucontainer clearfix-->  
+    <!--Menu HTML Code-->
+    
+
+
+		<header>
+			<h1><i class="icon icon-time"></i> <span class="clock">00:00:00</span></h1>
+			<nav>
+                <div class="buttons">
+					<a class="button small icon-fast-backward reset" href="#" onclick="return false;"></a>
+                    <a class="button small icon-backward revRapido" href="#" onclick="return false;"></a>
+					<a class="button small icon-play play" href="#" onclick="return false;"></a>
+                    <a class="button small icon-forward avanceRapido" href="#" onclick="return false;"></a>
+				</div>
+
+			</nav>
+		</header>
+        
+        
+		<article>
+<!--        <div>
+        <form name="contact_name" class="menu_form">
+        <input type="text" id="hiddencode" placeholder="Name">
+        </form>
+		</div>    
+<script type="text/javascript">
+var blurFunction = function(e) {
+
+
+     setTimeout(function(){
+          console.log(document.activeElement); // This is the element that has focus
+          if($(document.activeElement).is("input") || (document.activeElement).is("select")) {
+
+             $(document.activeElement).blur(blurFunction);
+         }
+         else {
+             $('#hiddencode').focus();
+         }
+         $('#hiddencode').val("");
+     });
+};
+$('#hiddencode').focus();
+</script>-->
+			<!--<div class="overlay">
+				<div class="top"></div>
+				<div class="bottom"></div>
+			</div>-->
+			<div class="teleprompter" id="teleprompter" contenteditable>
+				Oh, hello there. I did not see you come in. I was to busy reading off this TelePrompter. It does some pretty cool things, for example:
+				You can edit the text right on the page. It'll even save it for you if you happen to leave the page. That's some smart thinking.
+				If you're using an iPad, you can add a shortcut to your home screen for full screen awesomeness.
+				You can also use some handy keyboard shortcuts to speed things up. You can adjust the speed &amp; font size at the top right as well. We're also experimenting with ways to flip the text around for you fancy folks using mirrors.
+				The keyboard shortcuts are as  follows:
+				Up:  Increases Font Size
+				Down:  Decreases Font Size
+				Left:  Slows Down Teleprompter
+				Right:  Speeds Up Teleprompter
+				Space:  Starts / Stops Teleprompter
+				Escape: Resets Everything
+				Finally, we also made an effort to make sure your text will be easy to read. So if you are pasting text from a word document, we'll do some cleaning up to make the breaks flow more easily.
+				Thanks for Stopping by.
+			</div>
+			<i class="icon-play marker"></i>
+		</article>
+		<footer>
+
+		</footer>
+		<script src="js/jquery-1.10.1.min.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/jquery.timer.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+        <script src="js/jscolor.js"></script>
+		<script src="js/script.js"></script>
+
+
+<!--    <div class="app">
+        <h1>PhoneGap prueba APP TeleprompterPAD</h1>
+        <div id="deviceready" class="blink">
+            <p class="event listening">Connecting to Device</p>
+            <p class="event received">Esto chuta!</p>
+        </div>
+    </div>-->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>

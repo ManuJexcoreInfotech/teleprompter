@@ -1,0 +1,11 @@
+{
+    "com.atuhi.externalkeyboard": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/petrsimon/cordova.externalkeyboard.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}
