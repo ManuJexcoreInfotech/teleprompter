@@ -39,6 +39,11 @@ describe('app', function() {
         it('should report that it fired', function() {
             spyOn(app, 'receivedEvent');
             app.onDeviceReady();
+			screen.orientation.lock('landscape').then(function success() {
+				console.log("Successfully locked the orientation");
+			}, function error(errMsg) {
+				console.log("Error locking the orientation :: " + errMsg);
+			});
             expect(app.receivedEvent).toHaveBeenCalledWith('deviceready');
         });
     });
