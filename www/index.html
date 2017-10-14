@@ -397,5 +397,12 @@ $('#hiddencode').focus();
 	</script>-->
     
 </body>
+<script>
+    document.addEventListener("deviceready", onDeviceReady, false);
+    function onDeviceReady()
+    {
+        screen.lockOrientation('landscape');
+    }
+</script>
 
 </html>
