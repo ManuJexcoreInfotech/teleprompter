@@ -315,8 +315,9 @@ Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euis
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
         app.initialize();
-		window.screen.orientation.lock('landscape');
+		window.screen.lockOrientation('landscape');
 		console.log('Orientation is ' + screen.orientation.type);
+		alert(screen.orientation.type);
     </script>
     
 <!--    <script type="text/javascript" src="js/jquery.hotkeys.js"></script>
