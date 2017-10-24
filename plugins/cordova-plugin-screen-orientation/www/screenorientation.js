@@ -74,7 +74,7 @@ function addScreenOrientationApi(screenObject) {
         return p;
     };
     screenObject.unlock = function() {
-        screenOrientation.setOrientation('landscape');
+        screenOrientation.setOrientation('any');
     };
 }
 
