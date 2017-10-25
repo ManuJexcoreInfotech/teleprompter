@@ -23,7 +23,7 @@ describe('app', function() {
                 spyOn(app, 'onDeviceReady');
                 app.initialize();
                 helper.trigger(window.document, 'deviceready');
-				console.log("OnDeviceReady");
+				alert("OnDeviceReady");
             });
 
             waitsFor(function() {
@@ -39,19 +39,19 @@ describe('app', function() {
     describe('onDeviceReady', function() {
         it('should report that it fired', function() {
             spyOn(app, 'receivedEvent');
-			console.log("receivedEvent");
+			alert("receivedEvent");
             app.onDeviceReady();
 			window.screen.orientation.lock('landscape').then(function success() {
-				console.log("Successfully locked the orientation");
+				alert("Successfully locked the orientation");
 			}, function error(errMsg) {
-				console.log("Error locking the orientation :: " + errMsg);
+				alert("Error locking the orientation :: " + errMsg);
 			});
             expect(app.receivedEvent).toHaveBeenCalledWith('deviceready');
         });
     });
 
     describe('receivedEvent', function() {
-			console.log("receivedEvent111");
+			alert("receivedEvent111");
         beforeEach(function() {
 			
             var el = document.getElementById('stage');
@@ -69,7 +69,7 @@ describe('app', function() {
 
         it('should show the received element', function() {
             app.receivedEvent('deviceready');
-			console.log("deviceready111");
+			alert("deviceready111");
             var displayStyle = helper.getComputedStyle('#deviceready .received', 'display');
             expect(displayStyle).toEqual('block');
         });
