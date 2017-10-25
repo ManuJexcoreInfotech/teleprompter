@@ -23,6 +23,7 @@ describe('app', function() {
                 spyOn(app, 'onDeviceReady');
                 app.initialize();
                 helper.trigger(window.document, 'deviceready');
+				console.log("OnDeviceReady");
             });
 
             waitsFor(function() {
@@ -38,6 +39,7 @@ describe('app', function() {
     describe('onDeviceReady', function() {
         it('should report that it fired', function() {
             spyOn(app, 'receivedEvent');
+			console.log("receivedEvent");
             app.onDeviceReady();
 			window.screen.orientation.lock('landscape').then(function success() {
 				console.log("Successfully locked the orientation");
@@ -49,7 +51,9 @@ describe('app', function() {
     });
 
     describe('receivedEvent', function() {
+			console.log("receivedEvent111");
         beforeEach(function() {
+			
             var el = document.getElementById('stage');
             el.innerHTML = ['<div id="deviceready">',
                             '    <p class="event listening">Listening</p>',
@@ -65,6 +69,7 @@ describe('app', function() {
 
         it('should show the received element', function() {
             app.receivedEvent('deviceready');
+			console.log("deviceready111");
             var displayStyle = helper.getComputedStyle('#deviceready .received', 'display');
             expect(displayStyle).toEqual('block');
         });
