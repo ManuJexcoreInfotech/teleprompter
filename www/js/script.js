@@ -1,4 +1,4 @@
-var initPageSpeed = 35,
+var initPageSpeed = 40,
 	initFontSize = 60,
 	scrollDelay,
 	textColor = '#ffffff',
@@ -320,7 +320,7 @@ function remote_on()
 function pageScroll()
 {
 	if ($('.teleprompter').hasClass('flipy')) {
-    $('article').animate({scrollTop: "-=2px" }, 0, 'linear', function(){ $('article').clearQueue(); });
+    $('article').animate({scrollTop: "-=1px" }, 0, 'linear', function(){ $('article').clearQueue(); });
 
     clearTimeout(scrollDelay);
     scrollDelay = setTimeout(pageScroll, initPageSpeed);
@@ -334,7 +334,7 @@ function pageScroll()
       }, 500);
     }
 	} else {
-    $('article').animate({scrollTop: "+=2px" }, 0, 'linear', function(){ $('article').clearQueue(); });
+    $('article').animate({scrollTop: "+=1px" }, 0, 'linear', function(){ $('article').clearQueue(); });
 
     clearTimeout(scrollDelay);
     scrollDelay = setTimeout(pageScroll, initPageSpeed);
