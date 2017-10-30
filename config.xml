@@ -8,7 +8,7 @@
         ApplePode Team
     </author>
     <content src="index.html" />
-	<preference name="orientation" value="portrait" />
+	<preference name="orientation" value="landscape" />
 	<preference name="StatusBarOverlaysWebView" value="true"/>
 	<preference name="StatusBarBackgroundColor" value="#000000"/>
 	<preference name="StatusBarStyle" value="lightcontent" />
