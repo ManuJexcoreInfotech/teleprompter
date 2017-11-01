@@ -334,7 +334,10 @@ function pageScroll()
       }, 500);
     }
 	} else {
-    $('article').animate({scrollTop: "+=1px" }, 0, 'linear', function(){ $('article').clearQueue(); });
+//    $('article').animate({scrollTop: "+=1px" }, 0, 'linear', function(){ $('article').clearQueue(); });
+    $('article').animate({offset = (y > max) ? max : (y < min) ? min : y
+    (view.style[xform] = 'translateY(' + (-offset) + 'px)')
+    (indicator.style[xform] = 'translateY(' + (offset * relative) + 'px)')});
 
     clearTimeout(scrollDelay);
     scrollDelay = setTimeout(pageScroll, initPageSpeed);
