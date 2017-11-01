@@ -320,7 +320,7 @@ function remote_on()
 function pageScroll()
 {
 	if ($('.teleprompter').hasClass('flipy')) {
-    $('article').animate({scrollTop: "-=1px" }, 0, 'linear', function(){ $('article').clearQueue(); });
+    $('article').animate({scrollTop: "-=0.1px" }, 0, 'linear', function(){ $('article').clearQueue(); });
 
     clearTimeout(scrollDelay);
     scrollDelay = setTimeout(pageScroll, initPageSpeed);
