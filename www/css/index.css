@@ -218,5 +218,7 @@ h1 {
 }
 .smoothescroll{
     -webkit-transform: translateZ(0);
-        -webkit-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
