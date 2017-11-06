@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.ApplePode.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>ApplePode</name>
+<widget id="com.Teleprompter.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Teleprompter</name>
     <description>
-        Teleprompter application from ApplePode.com Team.
+        Teleprompter application from Jexcore.com Team.
     </description>
-    <author email="info@teleprompterpad.com" href="http://teleprompterpad.com">
-        ApplePode Team
+    <author email="info@gmail.com" href="http://teleprompterpad.com">
+        Teleprompter Team
     </author>
     <content src="index.html" />
 	<preference name="orientation" value="landscape" />
