@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.Teleprompter.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Teleprompter</name>
+<widget id="com.TeleprompterPAD.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>TeleprompterPAD</name>
     <description>
-        Teleprompter application from Jexcore.com Team.
+        TeleprompterPAD application from Jexcore.com Team.
     </description>
     <author email="info@gmail.com" href="http://teleprompterpad.com">
-        Teleprompter Team
+        TeleprompterPAD Team
     </author>
     <content src="index.html" />
     <preference name="orientation" value="landscape" />
