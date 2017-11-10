@@ -15,9 +15,12 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />	
     <preference name="KeyboardDisplayRequiresUserAction" value="false" /><!--supuestamente permite programar para que el teclado no salga automatico-->
-    <preference name="SplashShowOnlyFirstTime" value="true" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
     <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="60000" />	
+    <preference name="SplashScreenDelay" value="6000" />	
+	<feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+    </feature>
     <plugin name="cordova-plugin-device" source="npm" spec="~1.1.1" />
     <plugin name="cordova-plugin-device-motion" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-device-orientation" source="npm" spec="~1.0.2" />
