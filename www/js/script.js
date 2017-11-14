@@ -101,7 +101,7 @@ $(function() {
 		{
 			$(this).addClass('icon-gamepad');
 			edit_mode_off();
-			stop_teleprompter();
+			//stop_teleprompter();
 		}
 		
 	});	
@@ -114,7 +114,6 @@ $(function() {
 		}
 		else
 		{
-			
 			stop_teleprompter();
 		}
 	});
@@ -191,9 +190,7 @@ $(function() {
 //Edit Pencil mode
 
 function edit_mode_off(){	
-	
 	$("#teleprompter").attr("contenteditable",false);
-	
 }
 
 // Manage Font Size Change
