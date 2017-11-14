@@ -190,8 +190,13 @@ $(function() {
 
 function edit_mode_off(){	
 	$("#teleprompter").attr("contenteditable",false);
+	
 }
-
+$("#teleprompter").on('focus', function(e) {
+	if($(".button.remote_on").hasClass('icon-gamepad')){
+		e.preventDefault(); e.stopPropagation();
+	}
+});
 // Manage Font Size Change
 function fontSize(save_cookie)
 {
