@@ -101,7 +101,6 @@ $(function() {
 		{
 			$(this).addClass('icon-gamepad');
 			edit_mode_off();
-			//stop_teleprompter();
 		}
 		
 	});	
