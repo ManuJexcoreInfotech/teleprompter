@@ -91,15 +91,15 @@ $(function() {
 	speed(false);
 	// Listen for remote_on Button Click
 	$('.button.remote_on').click(function(){
-		if($(this).hasClass('icon-gamepad'))
+		if($(this).hasClass('icon-gamepada'))
 		{
-			$(this).removeClass('icon-gamepad');
+			$(this).removeClass('icon-gamepada');
 			start_remote_on();
 			stop_teleprompter();
 		}
 		else
 		{
-			$(this).addClass('icon-gamepad');
+			$(this).addClass('icon-gamepada');
 			edit_mode_off();
 		}
 		
@@ -193,7 +193,7 @@ function edit_mode_off(){
 	
 }
 $("#teleprompter").on('focus', function(e) {
-	if($(".button.remote_on").hasClass('icon-gamepad')){
+	if($(".button.remote_on").hasClass('icon-gamepada')){
 		e.preventDefault(); e.stopPropagation();
 	}
 });
