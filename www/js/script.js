@@ -93,22 +93,28 @@ $(function() {
 	$('.button.remote_on').click(function(){
 		if($(this).hasClass('icon-gamepad'))
 		{
+			$(this).removeClass('icon-gamepad');
 			start_remote_on();
 			stop_teleprompter();
 		}
 		else
 		{
+			$(this).addClass('icon-gamepad');
+			edit_mode_off();
 			stop_teleprompter();
 		}
+		
 	});	
 	// Listen for Play Button Click
 	$('.button.play').click(function(){
 		if($(this).hasClass('icon-play'))
 		{
 			start_teleprompter();
+			
 		}
 		else
 		{
+			
 			stop_teleprompter();
 		}
 	});
@@ -130,9 +136,11 @@ $(function() {
 		{
 			start_teleprompter_revRapido();
 			stop_teleprompter();
+			
 		}
 		else
 		{
+			
 			stop_teleprompter();
 		}
 	});			
@@ -179,6 +187,14 @@ $(function() {
 		$('article').stop().animate({scrollTop: 0}, 100, 'linear', function(){ $('article').clearQueue(); });
 	});
 });
+
+//Edit Pencil mode
+
+function edit_mode_off(){	
+	
+	$("#teleprompter").attr("contenteditable",false);
+	
+}
 
 // Manage Font Size Change
 function fontSize(save_cookie)
