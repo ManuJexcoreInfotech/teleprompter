@@ -56,6 +56,9 @@ header h1
 	text-indent: 30px;
 	color: #1a6364;/*#35aaac*/
 }
+header h1 p.clock.flipx-clock{
+        padding-left: 0px;    
+}
 header h1 p.clock
 {
 	color: #616161;
@@ -255,7 +258,7 @@ article .teleprompter.flipxy
 {
 	position: fixed;
 	left: 0;
-	top: 313px;
+         top: 48%;
 	color: #35aaac;
 	font-size: 40px;
 	display: none;
@@ -333,7 +336,7 @@ a.button.small.icon-pencil.remote_on{
 .marker.activate{
     position: fixed;
     right: 0;
-    top: 313px;
+    top: 48%;;
     color: #35aaac;
     font-size: 40px;
     transform: rotate(180deg);
