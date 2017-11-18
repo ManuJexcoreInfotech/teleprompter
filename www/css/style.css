@@ -151,9 +151,18 @@ article .teleprompter.flipx
 	-ms-transform: rotateY(180deg);
 	z-index: 1;
 	/*pointer-events: none;*/
+	padding: 100px 50px 1000px 100px !important;
+}
+article.android .teleprompter.flipx
+{
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	z-index: 1;
+	/*pointer-events: none;*/
 	padding: 100px 100px 1000px 50px !important;
 }
-
 
 article .teleprompter.flipy
 {
