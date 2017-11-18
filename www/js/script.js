@@ -7,7 +7,15 @@ var initPageSpeed = 40,
 
 $(function() {
 
-
+        remote_on();
+       if(navigator.userAgent.match(/Android/i))
+       {
+           $('article').addClass('android')
+       }
+       if(navigator.userAgent.match(/Android/i))
+       {
+           $('article').addClass('android')
+       }
 	// Check if we've been here before and made changes
 	if($.cookie('teleprompter_font_size'))
 	{
@@ -154,9 +162,14 @@ $(function() {
 //		else
 //		{
 			$('.teleprompter').toggleClass('flipx');
+                        
 			$('.clock').toggleClass('flipx-clock');
 			$('.controler-player').toggleClass('nav-flipx');
 			$('.small').toggleClass('button-flipy');
+                        if($('#teleprompter').hasClass('flipx'))
+                            $(".icon-play.marker").addClass('activate');
+                        else
+                           $(".icon-play.marker").removeClass('activate');
 			
 //		}
 	});

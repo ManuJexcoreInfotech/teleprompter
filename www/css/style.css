@@ -151,7 +151,7 @@ article .teleprompter.flipx
 	-ms-transform: rotateY(180deg);
 	z-index: 1;
 	/*pointer-events: none;*/
-	padding: 100px 50px 1000px 100px !important;
+	padding: 100px 100px 1000px 50px !important;
 }
 
 
@@ -315,7 +315,17 @@ article .teleprompter.flipxy
     margin-right: 40px;
     padding: 0;
 }
-.icon-gamepada{
-	
-	color:#35AAAC;
+a.button.small.icon-pencil.remote_on.icon-gamepada{
+      color:#616161 !important;
 }
+a.button.small.icon-pencil.remote_on{
+    color:#35AAAC!important;
+}
+.marker.activate{
+    position: fixed;
+    right: 0;
+    top: 313px;
+    color: #35aaac;
+    font-size: 40px;
+    transform: rotate(180deg);
+   }
