@@ -329,7 +329,7 @@ function remote_on()
 //		  //'target':document	
 //			});			
 		//alert("1. Close this bubble\n2. Press PLAY (B) BUTTON in the Remote to activate it");
-		document.getElementById("teleprompter").focus();
+		//document.getElementById("teleprompter").focus();
 		$('#teleprompter').attr('contenteditable', false);
 		document.body.addEventListener("keypress", function(e) {e.preventDefault();});//evita que introduzca texto
 //	function alertDismissed() {
