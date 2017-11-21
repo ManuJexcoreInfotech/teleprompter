@@ -6,8 +6,9 @@ var initPageSpeed = 40,
 	timer = $('.clock').timer({ stopVal: 10000 });
 
 $(function() {
-
-        remote_on();
+     
+       document.addEventListener("deviceready", onDeviceReady, false);
+       
        if(navigator.userAgent.match(/Android/i))
        {
            $('article').addClass('android')
@@ -202,7 +203,10 @@ $(function() {
 });
 
 //Edit Pencil mode
-
+function onDeviceReady(){
+    $('#teleprompter').attr('contenteditable', false);
+    document.body.addEventListener("keypress", function(e) {e.preventDefault();});
+}
 function edit_mode_off(){	
 	$("#teleprompter").attr("contenteditable",false);
 	
@@ -329,7 +333,7 @@ function remote_on()
 //		  //'target':document	
 //			});			
 		//alert("1. Close this bubble\n2. Press PLAY (B) BUTTON in the Remote to activate it");
-		//document.getElementById("teleprompter").focus();
+		document.getElementById("teleprompter").focus();
 		$('#teleprompter').attr('contenteditable', false);
 		document.body.addEventListener("keypress", function(e) {e.preventDefault();});//evita que introduzca texto
 //	function alertDismissed() {
