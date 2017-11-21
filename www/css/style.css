@@ -62,7 +62,9 @@ header p.background{
 .iphone p.background{
     display:block;
     background-color: #2f2f2f;
+    height:22px;
 }
+.iphone header{ height:70px;}
 .iphone .animated-arrow {
     cursor: pointer;
     padding: 24px 35px 16px 0px;
