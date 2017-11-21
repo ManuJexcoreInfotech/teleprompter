@@ -23,7 +23,7 @@
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarBackgroundColor" value="#2f2f2f" />
     <feature name="StatusBar">
-        <param name="ios-package" value="CDVStatusBar" onload="false" />
+        <param name="ios-package" value="CDVStatusBar" onload="true" />
     </feature>
     <feature name="SplashScreen">
         <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
