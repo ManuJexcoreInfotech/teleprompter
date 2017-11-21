@@ -11,10 +11,12 @@ $(function() {
        if(navigator.userAgent.match(/Android/i))
        {
            $('article').addClass('android')
+           $('body').addClass('android')
        }
        if(navigator.userAgent.match(/iPhone/i))
        {
            $('article').addClass('iphone')
+           $('body').addClass('iphone')
        }
 	// Check if we've been here before and made changes
 	if($.cookie('teleprompter_font_size'))
