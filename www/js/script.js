@@ -130,7 +130,7 @@ $(function () {
         {
 
             $(this).addClass('icon-gamepada');
-            start_remote_on();
+           
             edit_mode_off();
 
         }
@@ -582,7 +582,7 @@ function start_remote_on()
 {
     //alert("hola");
     //$('#teleprompter').attr('contenteditable', true);
-    $('.button.remote_on').addClass('icon-gamepada');
+    
     $('body').addClass('playing');
     $('.button.play').removeClass('icon-play').addClass('icon-pause');
     //$('header h1, header nav').fadeTo('slow', 0.15);
