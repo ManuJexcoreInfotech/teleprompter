@@ -7,8 +7,8 @@ var initPageSpeed = 40,
 
 
 $(".teleprompter").on('paste', function (e) {
-    $(this).css({"font-family":"'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif","font-size":"60px","font-weight":"bold"});
-    
+   // $(this).css({"font-family":"'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif","font-size":"60px","font-weight":"bold"});
+    fontSize(true);
 })
 
 $(function () {
