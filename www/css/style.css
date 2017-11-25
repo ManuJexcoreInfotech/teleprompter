@@ -64,10 +64,10 @@ header p.background{
     background-color: #2f2f2f;
     height:22px;
 }
-.iphone header{ height:70px;}
+.iphone header{ height:80px;}
 .iphone .animated-arrow {
     cursor: pointer;
-    padding: 24px 35px 16px 0px;
+    padding: 35px 35px 16px 0px;
     margin: 18px 0 0 18px;
 }
 
