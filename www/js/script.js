@@ -562,7 +562,7 @@ function start_teleprompter_avanceRapido()
 function start_teleprompter_revRapido()
 {
     $('#teleprompter').attr('contenteditable', false);
-    $(this).addClass('icon-gamepada');
+    
     $('body').addClass('playing');
     $('.button.play').removeClass('icon-play').addClass('icon-pause');
     //$('header h1, header nav').fadeTo('slow', 0.15);
@@ -577,7 +577,8 @@ function start_teleprompter_revRapido()
 function start_remote_on()
 {
     //alert("hola");
-    $('#teleprompter').attr('contenteditable', true);
+    //$('#teleprompter').attr('contenteditable', true);
+    $('.button.remote_on').addClass('icon-gamepada');
     $('body').addClass('playing');
     $('.button.play').removeClass('icon-play').addClass('icon-pause');
     //$('header h1, header nav').fadeTo('slow', 0.15);
