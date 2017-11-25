@@ -7,7 +7,7 @@ var initPageSpeed = 40,
 
 
 $(".teleprompter").on('paste', function (e) {
-   // $(this).css({"font-family":"'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif","font-size":"60px","font-weight":"bold"});
+    // $(this).css({"font-family":"'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif","font-size":"60px","font-weight":"bold"});
     fontSize(true);
 })
 
@@ -120,13 +120,19 @@ $(function () {
         if ($(this).hasClass('icon-gamepada'))
         {
             $(this).removeClass('icon-gamepada');
-
+            $('#teleprompter').attr('contenteditable', true);
             stop_teleprompter();
+            document.body.addEventListener("keypress", function (e) {
+                return true;
+            });
+
         } else
         {
+
             $(this).addClass('icon-gamepada');
             start_remote_on();
             edit_mode_off();
+
         }
 
     });
@@ -363,9 +369,7 @@ function remote_on()
     //alert("1. Close this bubble\n2. Press PLAY (B) BUTTON in the Remote to activate it");
     document.getElementById("teleprompter").focus();
     $('#teleprompter').attr('contenteditable', false);
-    document.body.addEventListener("keypress", function (e) {
-        e.preventDefault();
-    });//evita que introduzca texto
+    //evita que introduzca texto
 //	function alertDismissed() {
 //	document.getElementById("teleprompter").focus();
 //	document.body.addEventListener("keypress", function(e) {e.preventDefault();});//evita que introduzca texto
@@ -562,7 +566,7 @@ function start_teleprompter_avanceRapido()
 function start_teleprompter_revRapido()
 {
     $('#teleprompter').attr('contenteditable', false);
-    
+
     $('body').addClass('playing');
     $('.button.play').removeClass('icon-play').addClass('icon-pause');
     //$('header h1, header nav').fadeTo('slow', 0.15);
@@ -593,7 +597,8 @@ function start_remote_on()
 function stop_teleprompter()
 {
     clearTimeout(scrollDelay);
-    $('#teleprompter').attr('contenteditable', true);
+    //$('#teleprompter').attr('contenteditable', true);
+
     $('header h1, header nav').fadeTo('slow', 1);
     $('.button.play').removeClass('icon-pause').addClass('icon-play');
     //$('.marker, .overlay').fadeOut('slow');
