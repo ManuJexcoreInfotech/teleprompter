@@ -136,6 +136,9 @@ $(function () {
         }
 
     });
+    $('.button.icon-folder-open').click(function () {
+        $("input[name='iamge']").click();
+    })
     // Listen for Play Button Click
     $('.button.play').click(function () {
         if ($(this).hasClass('icon-play'))

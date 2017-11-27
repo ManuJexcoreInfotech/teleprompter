@@ -316,10 +316,10 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
-                        app.initialize();
+                app.initialize();
 
-                        console.log('Orientation is ' + screen.orientation.type);
-                        //alert(screen.orientation.type);
+                console.log('Orientation is ' + screen.orientation.type);
+                //alert(screen.orientation.type);
         </script>
 
         <!--    <script type="text/javascript" src="js/jquery.hotkeys.js"></script>
@@ -335,44 +335,44 @@
         <script>
 
 //IOS: THIS SCRIPT ALLOWS THE BLUETOOTH KEYBOARD TO BE ACTIVATED AFTER PUT THE FOCUS MANUALLY ON THE TEXT OF THE TELEPROMTPER	
-                    shortcut.add("w", function () {
-                        $('.button.avanceRapido').trigger('click');
-                        setTimeout(function () {
-                            document.activeElement.blur();
-                        }, 100);//espera 1/10 segundos y luego quita el foco del campo de texto del teleprompter para que funcione el mando
-                    });
-                    shortcut.add("x", function () {
-                        $('.button.revRapido').trigger('click');
-                        setTimeout(function () {
-                            document.activeElement.blur();
-                        }, 100);
-                    });
-                    shortcut.add("d", function () {
-                        $('.button.play').trigger('click');
-                        setTimeout(function () {
-                            document.activeElement.blur();
-                        }, 100);//espera 1/10 segundos y luego quita el foco del campo de texto del teleprompter para que funcione el mando
-                    });
-                    shortcut.add("a", function () {
-                        $('.button.reset').trigger('click');
-                        setTimeout(function () {
-                            document.activeElement.blur();
-                        }, 100);//espera 1/10 segundos y luego quita el foco del campo de texto del teleprompter para que funcione el mando
-                    });
+                shortcut.add("w", function () {
+                    $('.button.avanceRapido').trigger('click');
+                    setTimeout(function () {
+                        document.activeElement.blur();
+                    }, 100);//espera 1/10 segundos y luego quita el foco del campo de texto del teleprompter para que funcione el mando
+                });
+                shortcut.add("x", function () {
+                    $('.button.revRapido').trigger('click');
+                    setTimeout(function () {
+                        document.activeElement.blur();
+                    }, 100);
+                });
+                shortcut.add("d", function () {
+                    $('.button.play').trigger('click');
+                    setTimeout(function () {
+                        document.activeElement.blur();
+                    }, 100);//espera 1/10 segundos y luego quita el foco del campo de texto del teleprompter para que funcione el mando
+                });
+                shortcut.add("a", function () {
+                    $('.button.reset').trigger('click');
+                    setTimeout(function () {
+                        document.activeElement.blur();
+                    }, 100);//espera 1/10 segundos y luego quita el foco del campo de texto del teleprompter para que funcione el mando
+                });
 
 //shortcut.js // Listen for Key Presses on Body for ANDROID
-                    shortcut.add("up", function () {
-                        $('.button.avanceRapido').trigger('click');
-                    });
-                    shortcut.add("down", function () {
-                        $('.button.revRapido').trigger('click');
-                    });
-                    shortcut.add("right", function () {
-                        $('.button.play').trigger('click');
-                    });
-                    shortcut.add("left", function () {
-                        $('.button.reset').trigger('click');
-                    });
+                shortcut.add("up", function () {
+                    $('.button.avanceRapido').trigger('click');
+                });
+                shortcut.add("down", function () {
+                    $('.button.revRapido').trigger('click');
+                });
+                shortcut.add("right", function () {
+                    $('.button.play').trigger('click');
+                });
+                shortcut.add("left", function () {
+                    $('.button.reset').trigger('click');
+                });
         </script>
 
         <!--    <script>
@@ -408,10 +408,40 @@
                 console.log('konami code');
             });
                 </script>-->
-
+        <input type="file" style="display: none;"  name="iamge" id="fileinput" accept="text/plain" onchange="handleFileSelect();" />
+        <div id='myDiv'>
+            <!-- add the fields/buttons here -->
+        </div>
     </body>
     <script type="text/javascript" charset="utf-8">
+        function handleFileSelect()
+        {
+            if (!window.File || !window.FileReader || !window.FileList || !window.Blob) {
+                alert('The File APIs are not fully supported in this browser.');
+                return;
+            }
 
+            input = document.getElementById('fileinput');
+            if (!input) {
+                alert("Um, couldn't find the fileinput element.");
+            } else if (!input.files) {
+                alert("This browser doesn't seem to support the `files` property of file inputs.");
+            } else if (!input.files[0]) {
+                alert("Please select a file before clicking 'Load'");
+            } else {
+                file = input.files[0];
+                fr = new FileReader();
+                fr.onload = receivedText;
+                //fr.readAsText(file);
+                fr.readAsBinaryString(file);
+            }
+        }
+        function receivedText() {
+            var result = fr.result.split(',',2);
+            
+            document.getElementById('myDiv').appendChild(document.createTextNode(fr.result));
+            $('#myDiv').show();
+        }
     </script>
 
 </html>
