@@ -137,9 +137,11 @@ $(function () {
 
     });
     $('.button.icon-folder-open').click(function () {
-        alert("open")
-        $("input[name='iamge']").click();
+             $("input[name='iamge']").click();
     })
+    $(".modal-header .close").click(function(){
+       $('#myDiv').hide(); 
+    });
     // Listen for Play Button Click
     $('.button.play').click(function () {
         if ($(this).hasClass('icon-play'))
