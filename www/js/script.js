@@ -137,6 +137,7 @@ $(function () {
 
     });
     $('.button.icon-folder-open').click(function () {
+        alert("open")
         $("input[name='iamge']").click();
     })
     // Listen for Play Button Click
