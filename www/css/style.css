@@ -64,12 +64,12 @@ header p.background{
     background-color: #2f2f2f;
     height:22px;
 }
-.iphone header{ height:80px;}
-.iphone .animated-arrow {
+/*.iphone header{ height:80px;}*/
+/*.iphone .animated-arrow {
     cursor: pointer;
     padding: 35px 35px 16px 0px;
     margin: 18px 0 0 18px;
-}
+}*/
 
 header h1 p.clock.flipx-clock{
     padding-left: 0px;    
@@ -365,7 +365,7 @@ a.button.small.icon-pencil.remote_on{
     background-color: rgba(0,0,0,0.6);
     z-index: 10;
     display: none;
-    
+
 }
 /* The Modal (background) */
 .modal {
@@ -420,14 +420,20 @@ a.button.small.icon-pencil.remote_on{
     padding: 2px 16px;
     background-color: #fff;
     color: #000;
-    border-bottom: 1px solid #e5e5e5 ;
+   
 }
 
 /* Modal Body */
 .modal-body {
-    padding: 2px 16px;
-    max-height: 100%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height:70vh;
     overflow: scroll;
+    width:100%;
+    -webkit-overflow-scrolling: touch;
+    padding:10px;
+    background-color:#fff;
+
 }
 
 /* Modal Footer */

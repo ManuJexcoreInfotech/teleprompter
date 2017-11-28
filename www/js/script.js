@@ -7,6 +7,15 @@ var initPageSpeed = 40,
 
 
 $(".teleprompter").on('paste', function (e) {
+//    clipboard.setData('text/plain', clipboard.getData('text/plain'));
+    setTimeout(function () {
+        $('article .teleprompter span').each(function () {
+            $(this).removeAttr('style');
+        });
+        $('article .teleprompter p').each(function () {
+            $(this).removeAttr('style');            
+        });
+    },100);
     // $(this).css({"font-family":"'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif","font-size":"60px","font-weight":"bold"});
     fontSize(true);
 })
@@ -130,17 +139,17 @@ $(function () {
         {
 
             $(this).addClass('icon-gamepada');
-           
+
             edit_mode_off();
 
         }
 
     });
     $('.button.icon-folder-open').click(function () {
-             $("input[name='iamge']").click();
+        $("input[name='iamge']").click();
     })
-    $(".modal-header .close").click(function(){
-       $('#myDiv').hide(); 
+    $(".modal-header .close").click(function () {
+        $('#myDiv').hide();
     });
     // Listen for Play Button Click
     $('.button.play').click(function () {
@@ -243,6 +252,8 @@ $("#teleprompter").on('focus', function (e) {
 // Manage Font Size Change
 function fontSize(save_cookie)
 {
+
+
     initFontSize = $('.font_size').slider("value");
 
     $('article .teleprompter').css({
@@ -262,6 +273,7 @@ function fontSize(save_cookie)
     {
         $.cookie('teleprompter_font_size', initFontSize);
     }
+
 }
 
 // Manage Speed Change
@@ -588,7 +600,7 @@ function start_remote_on()
 {
     //alert("hola");
     //$('#teleprompter').attr('contenteditable', true);
-    
+
     $('body').addClass('playing');
     $('.button.play').removeClass('icon-play').addClass('icon-pause');
     //$('header h1, header nav').fadeTo('slow', 0.15);

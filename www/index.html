@@ -273,8 +273,7 @@
             </style>
                                     <input type="text" class="teleprompter" font color="white" id="teleprompter" tabindex="0" value="hola" autofocus>-->
 
-            <div class="teleprompter" id="teleprompter" contenteditable="true">
-                This app is under trial, we do not make sure it works properly.
+            <div class="teleprompter" id="teleprompter" contenteditable="true">This app is under trial, we do not make sure it works properly.
 
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
 
@@ -415,14 +414,14 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <span class="close">&times;</span>
-                    <h2>Modal Header</h2>
+                   
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" contenteditable="true">
                     <p>Some text in the Modal Body</p>
                     <p>Some other text...</p>
                 </div>
                 <div class="modal-footer">
-                    <h3>Modal Footer</h3>
+                   
                 </div>
             </div>
         </div>
@@ -456,6 +455,7 @@
 //            document.getElementById('myDiv').appendChild(document.createTextNode(fr.result));
             $(".modal-body").html('<p>'+fr.result+"</p>");
             $('#myDiv').show();
+            $('#myDiv').css("display","block");
         }
     </script>
 
