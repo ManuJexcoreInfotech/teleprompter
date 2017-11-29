@@ -10,7 +10,7 @@
     <content src="index.html" />
     <preference name="orientation" value="landscape" />
     <preference name="StatusBarOverlaysWebView" value="true"/>
-    <preference name="StatusBarBackgroundColor" value="#000000"/>
+    <preference name="StatusBarBackgroundColor" value="#373737"/>
     <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="SplashMaintainAspectRatio" value="true" />
@@ -60,11 +60,7 @@
     <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="www/res/screen/android/drawable-land-mdpi-screen.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="www/res/screen/android/drawable-land-hdpi-screen.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="www/res/screen/android/drawable-land-xhdpi-screen.png" />
-    <gap:splash gap:platform="ios" height="480" src="www/res/screen/ios/Default~iphone.png" width="320" />
-    <gap:splash gap:platform="ios" height="960" src="www/res/screen/ios/Default@2x~iphone.png" width="640" />
-    <gap:splash gap:platform="ios" height="1136" src="www/res/screen/ios/Default-Landscape@2x~ipad.png" width="640" />
-    <gap:splash gap:platform="ios" height="1024" src="www/res/screen/ios/Default-Landscape~ipad.png" width="768" />
-    <gap:splash gap:platform="ios" height="768" src="www/res/screen/ios/Default-Portrait~ipad.png" width="1024" />
+
     <platform name="android">
         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />
