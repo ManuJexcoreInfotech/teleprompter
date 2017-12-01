@@ -64,12 +64,12 @@ header p.background{
     background-color: #373737;
     height:22px;
 }
-/*.iphone header{ height:80px;}*/
-/*.iphone .animated-arrow {
+.iphone header{ height:80px;}
+.iphone .animated-arrow {
     cursor: pointer;
     padding: 35px 35px 16px 0px;
     margin: 18px 0 0 18px;
-}*/
+}
 
 header h1 p.clock.flipx-clock{
     padding-left: 0px;    
