@@ -15,6 +15,11 @@ $(".teleprompter").on('paste', function (e) {
         $('article .teleprompter p').each(function () {
             $(this).removeAttr('style');            
         });
+            var txt = $("article .teleprompter").html();
+            var html = txt.replace(/<{1}[^<>]{1,}>{1}/g," ");
+            $("article .teleprompter").html("<p>"+html+"</p>");
+        
+        
     },100);
     // $(this).css({"font-family":"'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif","font-size":"60px","font-weight":"bold"});
     fontSize(true);
