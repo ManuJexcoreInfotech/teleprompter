@@ -421,7 +421,7 @@
                     <p>Some other text...</p>
                 </div>
                 <div class="modal-footer">
-
+                    <button style="float:right;">Close</button>
                 </div>
             </div>
         </div>
@@ -451,11 +451,13 @@
         }
         function receivedText() {
             var result = fr.result.split(',', 2);
-
 //            document.getElementById('myDiv').appendChild(document.createTextNode(fr.result));
-            $(".modal-body").html('<p>' + fr.result + "</p>");
-            $('#myDiv').show();
-            $('#myDiv').css("display", "block");
+            var  i = confirm("Are you want to load file ?")
+            if(i){
+                $(".modal-body").html('<p>' + fr.result + "</p>");
+                $('#myDiv').show();
+                $('#myDiv').css("display", "block");
+            }
         }
     </script>
     <script type="text/javascript">
