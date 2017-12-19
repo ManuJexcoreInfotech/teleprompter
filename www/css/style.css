@@ -420,7 +420,7 @@ a.button.small.icon-pencil.remote_on{
     padding: 2px 16px;
     background-color: #fff;
     color: #000;
-   
+
 }
 
 /* Modal Body */
@@ -446,8 +446,28 @@ a.button.small.icon-pencil.remote_on{
     bottom: 0;
     width: 100%;
 }
-
-
+.btn{
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: none;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+.btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+}
 
 /* Add Animation */
 @-webkit-keyframes animatetop {

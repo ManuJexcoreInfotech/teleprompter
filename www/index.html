@@ -407,7 +407,7 @@
                 console.log('konami code');
             });
                 </script>-->
-        <form>
+        <form enctype="mulipart/form-data">
             <input type="file" style="display: none;"  name="iamge" id="fileinput" accept="text/plain" onchange="handleFileSelect();" />
         </form>
         <div id='myDiv'>
@@ -421,7 +421,10 @@
                     <p>Some other text...</p>
                 </div>
                 <div class="modal-footer">
-                    <button style="float:right;">Close</button>
+                    <div style="float:right;">
+                        <button class="btn btn-primary" onclick="closeModel()">Ok</button>
+                        <button class="btn btn-danger"  onclick="closeModel()">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -429,6 +432,7 @@
     <script type="text/javascript" charset="utf-8">
         function handleFileSelect()
         {
+            alert(1);
             if (!window.File || !window.FileReader || !window.FileList || !window.Blob) {
                 alert('The File APIs are not fully supported in this browser.');
                 return;
@@ -452,12 +456,20 @@
         function receivedText() {
             var result = fr.result.split(',', 2);
 //            document.getElementById('myDiv').appendChild(document.createTextNode(fr.result));
-            var  i = confirm("Are you want to load file ?")
-            if(i){
+           // var  i = confirm("Are you want to load file ?")
+//            if(i){
+                alert("Your text file loaded successfully.");
                 $(".modal-body").html('<p>' + fr.result + "</p>");
                 $('#myDiv').show();
+                document.getElementById('fileinput').value='';
                 $('#myDiv').css("display", "block");
-            }
+//            }
+        }
+        function closeModel()
+        {
+            $('#myDiv').hide();
+            document.getElementById('fileinput').value='';
+            $('#myDiv').css("display", "none");
         }
     </script>
     <script type="text/javascript">
