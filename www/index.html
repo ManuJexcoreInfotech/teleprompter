@@ -457,11 +457,21 @@
 //            document.getElementById('myDiv').appendChild(document.createTextNode(fr.result));
            // var  i = confirm("Are you want to load file ?")
 //            if(i){
-                alert("Your text file loaded successfully.");
-                $(".modal-body").html('<p>' + fr.result + "</p>");
-                $('#myDiv').show();
-                document.getElementById('fileinput').value='';
-                $('#myDiv').css("display", "block");
+                //alert("Your text file loaded successfully.");
+//                $('#myDiv').show();
+//                document.getElementById('fileinput').value='';
+//                $('#myDiv').css("display", "block");
+                
+                $(".teleprompter").html('<p>' + fr.result + "</p>");
+               $('article .teleprompter span').each(function () {
+                    $(this).removeAttr('style');
+                });
+                $('article .teleprompter p').each(function () {
+                    $(this).removeAttr('style');            
+                });
+                var txt = $("article .teleprompter").html();
+                var html = txt.replace(/<{1}[^<>]{1,}>{1}/g," ");
+                $("article .teleprompter").html("<p>"+html+"</p>");
 //            }
         }
         function closeModel()

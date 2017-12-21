@@ -151,7 +151,10 @@ $(function () {
 
     });
     $('.button.icon-folder-open').click(function () {
-        $("input[name='iamge']").click();
+        var r = confirm("Supported format .txt The selected text replaces the current text.");
+        if (r) {
+            $("input[name='iamge']").click();
+        }
     })
     $(".modal-header .close").click(function () {
         $('#myDiv').hide();
