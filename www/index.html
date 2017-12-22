@@ -431,7 +431,7 @@
     </body>
     <script type="text/javascript" charset="utf-8">
         function handleFileSelect()
-        {           
+        {
             if (!window.File || !window.FileReader || !window.FileList || !window.Blob) {
                 alert('The File APIs are not fully supported in this browser.');
                 return;
@@ -455,29 +455,32 @@
         function receivedText() {
             var result = fr.result.split(',', 2);
 //            document.getElementById('myDiv').appendChild(document.createTextNode(fr.result));
-           // var  i = confirm("Are you want to load file ?")
+            // var  i = confirm("Are you want to load file ?")
 //            if(i){
-                //alert("Your text file loaded successfully.");
+            //alert("Your text file loaded successfully.");
 //                $('#myDiv').show();
 //                document.getElementById('fileinput').value='';
 //                $('#myDiv').css("display", "block");
-                
-                $(".teleprompter").html('<p>' + fr.result + "</p>");
-               $('article .teleprompter span').each(function () {
-                    $(this).removeAttr('style');
-                });
-                $('article .teleprompter p').each(function () {
-                    $(this).removeAttr('style');            
-                });
-                var txt = $("article .teleprompter").html();
-                var html = txt.replace(/<{1}[^<>]{1,}>{1}/g," ");
-                $("article .teleprompter").html("<p>"+html+"</p>");
+
+            $(".teleprompter").html('<p>' + fr.result + "</p>");
+            $('article .teleprompter span').each(function () {
+                $(this).removeAttr('style');
+            });
+            $('article .teleprompter p').each(function () {
+                $(this).removeAttr('style');
+            });
+            var txt = $("article .teleprompter").html();
+            var html = txt.replace(/<{1}[^<>]{1,}>{1}/g, " ");
+            $("article .teleprompter").html("<p>" + html + "</p>");
+            $('article').stop().animate({scrollTop: 0}, 100, 'linear', function () {
+                $('article').clearQueue();
+            });
 //            }
         }
         function closeModel()
         {
             $('#myDiv').hide();
-            document.getElementById('fileinput').value='';
+            document.getElementById('fileinput').value = '';
             $('#myDiv').css("display", "none");
         }
     </script>
