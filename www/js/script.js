@@ -169,9 +169,9 @@ $(function () {
     })
     function alertDismissed(results) {
         //alert(results.buttonIndex);
-        console.log(typeof results.buttonIndex);
+        //console.log(typeof results.buttonIndex);
         console.log(results.buttonIndex);
-            $("input[name='iamge']").click();
+        $("input[name='iamge']").click();
         if (results.buttonIndex == '1') {
             alert(results.buttonIndex);
         }
