@@ -13,14 +13,14 @@ $(".teleprompter").on('paste', function (e) {
             $(this).removeAttr('style');
         });
         $('article .teleprompter p').each(function () {
-            $(this).removeAttr('style');            
+            $(this).removeAttr('style');
         });
-            var txt = $("article .teleprompter").html();
-            var html = txt.replace(/<{1}[^<>]{1,}>{1}/g," ");
-            $("article .teleprompter").html("<p>"+html+"</p>");
-        
-        
-    },100);
+        var txt = $("article .teleprompter").html();
+        var html = txt.replace(/<{1}[^<>]{1,}>{1}/g, " ");
+        $("article .teleprompter").html("<p>" + html + "</p>");
+
+
+    }, 100);
     // $(this).css({"font-family":"'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif","font-size":"60px","font-weight":"bold"});
     fontSize(true);
 })
@@ -151,17 +151,26 @@ $(function () {
 
     });
     $('.button.icon-folder-open').click(function () {
-        navigator.notification.alert(
-            'Supported format .txt The selected text replaces the current text.',  // message
-            alertDismissed,         // callback
-            '',            // title
-            ['Ok','Cancel']                  // buttonName
-        );
+//        navigator.notification.alert(
+//            'Supported format .txt The selected text replaces the current text.',  // message
+//            alertDismissed,         // callback
+//            '',            // title
+//            ['Ok','Cancel']                  // buttonName
+//        );
+        navigator.notification.prompt(
+                'Supported format .txt The selected text replaces the current text.', // message
+                alertDismissed, // callback to invoke
+                '', // title
+                ['Ok', 'Exit'], // buttonLabels
+                ''                 // defaultText
+                );
+
+
     })
-    function alertDismissed(buttonIndex){
-        if(buttonIndex === 0){
-             $("input[name='iamge']").click();
-         }
+    function alertDismissed(buttonIndex) {
+        if (buttonIndex === 0) {
+            $("input[name='iamge']").click();
+        }
     }
     $(".modal-header .close").click(function () {
         $('#myDiv').hide();
