@@ -151,11 +151,17 @@ $(function () {
 
     });
     $('.button.icon-folder-open').click(function () {
-        var r = confirm("Supported format .txt The selected text replaces the current text.");
-        if (r) {
-            $("input[name='iamge']").click();
-        }
+        navigator.notification.alert(
+            'Supported format .txt The selected text replaces the current text.',  // message
+            alertDismissed,         // callback
+            '',            // title
+            "['Ok','Cancel']"                  // buttonName
+        );
     })
+    function alertDismissed(buttonIndex){
+        alert(buttonIndex);
+//         $("input[name='iamge']").click();
+    }
     $(".modal-header .close").click(function () {
         $('#myDiv').hide();
     });

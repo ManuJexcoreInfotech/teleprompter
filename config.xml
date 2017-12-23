@@ -52,6 +52,7 @@
     -->
     <plugin name="cordova-plugin-keyboard" source="npm" />
     <plugin name="cordova-plugin-statusbar" source="npm" />
+    <plugin name="cordova-plugin-dialogs" source="npm" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
     <plugin name="cordova-plugin-screen-orientation" source="npm"  />
     <icon  src="www/res/icon/android/drawable-ldpi-icon.png" />
