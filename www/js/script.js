@@ -170,7 +170,7 @@ $(function () {
     function alertDismissed(results) {
         //alert(results.buttonIndex);
         console.log(results.buttonIndex);
-        if (results.buttonIndex == 1) {
+        if (results.buttonIndex === 1) {
             $("input[name='iamge']").click();
         }
     }
