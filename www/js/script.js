@@ -155,12 +155,13 @@ $(function () {
             'Supported format .txt The selected text replaces the current text.',  // message
             alertDismissed,         // callback
             '',            // title
-            "['Ok','Cancel']"                  // buttonName
+            ['Ok','Cancel']                  // buttonName
         );
     })
     function alertDismissed(buttonIndex){
-        alert(buttonIndex);
-//         $("input[name='iamge']").click();
+        if(buttonIndex === 0){
+             $("input[name='iamge']").click();
+         }
     }
     $(".modal-header .close").click(function () {
         $('#myDiv').hide();
