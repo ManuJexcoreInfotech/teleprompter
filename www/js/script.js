@@ -172,7 +172,8 @@ $(function () {
         console.log(typeof results.buttonIndex);
         console.log(results.buttonIndex);
             $("input[name='iamge']").click();
-        if (results.buttonIndex) {
+        if (results.buttonIndex == '1') {
+            alert(results.buttonIndex);
         }
     }
     $(".modal-header .close").click(function () {
