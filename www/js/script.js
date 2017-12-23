@@ -157,7 +157,7 @@ $(function () {
 //            '',            // title
 //            ['Ok','Cancel']                  // buttonName
 //        );
-        navigator.notification.prompt(
+        navigator.notification.confirm(
                 'Supported format .txt The selected text replaces the current text.', // message
                 alertDismissed, // callback to invoke
                 '', // title
@@ -169,8 +169,9 @@ $(function () {
     })
     function alertDismissed(results) {
         //alert(results.buttonIndex);
+        console.log(typeof results.buttonIndex);
         console.log(results.buttonIndex);
-        if (results.buttonIndex !== 2) {
+        if (results.buttonIndex) {
             $("input[name='iamge']").click();
         }
     }
