@@ -151,27 +151,35 @@ $(function () {
 
     });
     $('.button.icon-folder-open').click(function () {
-//        navigator.notification.alert(
-//            'Supported format .txt The selected text replaces the current text.',  // message
-//            alertDismissed,         // callback
-//            '',            // title
-//            ['Ok','Cancel']                  // buttonName
-//        );
-        navigator.notification.confirm(
-                'Supported format .txt The selected text replaces the current text.', // message
-                alertDismissed, // callback to invoke
-                '', // title
-                ['Ok', 'Exit'], // buttonLabels
-                ''                 // defaultText
-                );
 
+//        navigator.notification.confirm(
+//                'Supported format .txt The selected text replaces the current text.', // message
+//                alertDismissed, // callback to invoke
+//                '', // title
+//                ['Ok', 'Exit'], // buttonLabels
+//                ''                 // defaultText
+//                );
+        showAlert('Supported format .txt The selected text replaces the current text.');
 
     })
+    
+    function closeAlert()
+    {
+        $('#myDiv').hide();
+        document.getElementById('fileinput').value = '';
+        $('#myDiv').css("display", "none");
+    }
+    function showAlert(alert)
+    {
+        $('#myDiv').show();
+        $('.modal-body').html("<h4>"+alert+"</h4>");
+        $('#myDiv').css("display", "block");
+    }
     function alertDismissed(results) {
         //alert(results.buttonIndex);
-        //console.log(typeof results.buttonIndex);
+        console.log(typeof results.buttonIndex);
         console.log(results.buttonIndex);
-        $("input[name='iamge']").click();
+       
         if (results.buttonIndex == '1') {
             alert(results.buttonIndex);
         }

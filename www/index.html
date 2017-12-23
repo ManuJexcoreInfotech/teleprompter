@@ -412,17 +412,13 @@
         </form>
         <div id='myDiv'>
             <div class="modal-content">
-                <div class="modal-header">
-                    <span class="close">&times;</span>
-
-                </div>
+                
                 <div class="modal-body" contenteditable="true">
-                    <p>Some text in the Modal Body</p>
-                    <p>Some other text...</p>
+                                      
                 </div>
                 <div class="modal-footer">
                     <div style="float:right;">
-                        <button class="btn btn-primary" onclick="closeModel()">Ok</button>
+                        <button class="btn btn-primary" onclick="Confirm()">Ok</button>
                         <button class="btn btn-danger"  onclick="closeModel()">Close</button>
                     </div>
                 </div>
@@ -472,6 +468,7 @@
             var txt = $("article .teleprompter").html();
             var html = txt.replace(/<{1}[^<>]{1,}>{1}/g, " ");
             $("article .teleprompter").html("<p>" + html + "</p>");
+            document.getElementById('fileinput').value = '';
             $('article').stop().animate({scrollTop: 0}, 100, 'linear', function () {
                 $('article').clearQueue();
             });
@@ -482,6 +479,13 @@
             $('#myDiv').hide();
             document.getElementById('fileinput').value = '';
             $('#myDiv').css("display", "none");
+        }
+        function Confirm()
+        {
+            $('#myDiv').hide();
+            document.getElementById('fileinput').value = '';
+            $('#myDiv').css("display", "none");
+            $("input[name='iamge']").click();
         }
     </script>
     <script type="text/javascript">
