@@ -168,7 +168,8 @@ $(function () {
 
     })
     function alertDismissed(buttonIndex) {
-        if (buttonIndex === 0) {
+        alert(buttonIndex);
+        if (buttonIndex == 0) {
             $("input[name='iamge']").click();
         }
     }
