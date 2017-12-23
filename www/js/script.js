@@ -167,10 +167,10 @@ $(function () {
 
 
     })
-    function alertDismissed(buttonIndex) {
-        alert(buttonIndex);
-        console.log(buttonIndex);
-        if (buttonIndex == 0) {
+    function alertDismissed(results) {
+        alert(results.buttonIndex);
+        console.log(results.buttonIndex);
+        if (results.buttonIndex == 0) {
             $("input[name='iamge']").click();
         }
     }
