@@ -538,7 +538,7 @@ a.button.small.icon-pencil.remote_on{
     font-weight: 400;
     font-size: 13px;
 }
-.dialog-header p,.dialog-content p,.dialog-content d{color:#000!important;}
+.dialog-header,.dialog-content p,.dialog-content d{color:#000!important;}
 .dialog-button a {
     display:block;
     text-align: center;
