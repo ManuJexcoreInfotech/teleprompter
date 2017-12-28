@@ -474,3 +474,97 @@ a.button.small.icon-pencil.remote_on{
     from {top: -300px; opacity: 0}
     to {top: 0; opacity: 1}
 }
+
+/* NEW CSS */
+
+.flex-container {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	
+	display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.dialog {
+	-webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+	
+    border-radius: 10px;
+    
+    width: 250px;
+    
+	background: rgba(220, 220, 220, 0.85)
+}
+
+.dialog-header {
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    border-bottom: rgb(180,180,180) solid 1px;
+}
+
+.dialog-content {
+    padding: 10px 12px;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.dialog-button a {
+    display:block;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #2e7cf1;
+    border-top: rgb(180,180,180) solid 1px;
+}
+
+.dialog-button a:last-child {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.dialog-button .cancel {
+    font-weight: 700;
+}
+
+.dialog-button a:hover {
+    background: rgb(180,180,180);   
+}
+
+.dialog p {
+    line-height: 18px;
+}
+/* NEW CSS */

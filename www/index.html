@@ -411,7 +411,7 @@
             <input type="file" style="display: none;"  name="iamge" id="fileinput" accept="text/plain" onchange="handleFileSelect();" />
         </form>
         <div id='myDiv'>
-            <div class="modal-content">
+<!--            <div class="modal-content">
                 
                 <div class="modal-body" contenteditable="true">
                                       
@@ -420,6 +420,19 @@
                     <div style="float:right;">
                         <button class="btn btn-primary" onclick="Confirm()">Ok</button>
                         <button class="btn btn-danger"  onclick="closeModel()">Close</button>
+                    </div>
+                </div>
+            </div>-->
+            <div class="flex-container">
+                <div class="dialog">
+                    <h2 class="dialog-header">Open file info</h2>
+                    <div class="dialog-content">
+                        <d>Only TXT file format is accepted.</d>
+                        <p>The TXT will replace the current text.</p>
+                    </div>
+                    <div class="dialog-button">
+                        <a href="#" onclick="Confirm()">OK</a>	
+                        <a href="#" onclick="closeModel()">Cancel</a>	
                     </div>
                 </div>
             </div>
