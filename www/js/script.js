@@ -5,7 +5,9 @@ var initPageSpeed = 40,
         backgroundColor = '#141414',
         timer = $('.clock').timer({stopVal: 10000});
 
-
+$('.teleprompter').bind("DOMSubtreeModified",function(){
+  alert('changed');
+});
 $(".teleprompter").on('paste', function (e) {
 //    clipboard.setData('text/plain', clipboard.getData('text/plain'));
     setTimeout(function () {
