@@ -6,7 +6,8 @@ var initPageSpeed = 40,
         timer = $('.clock').timer({stopVal: 10000});
 
 $('.teleprompter').bind("DOMSubtreeModified",function(){
-  alert('changed');
+  //alert('changed');
+  $(this).css("min-height","100vw");
 });
 $(".teleprompter").on('paste', function (e) {
 //    clipboard.setData('text/plain', clipboard.getData('text/plain'));
