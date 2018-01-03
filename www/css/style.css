@@ -19,10 +19,12 @@ body
     background-color: #141414;
     font-family: 'Open Sans', sans-serif;
     color: #fff;
+    
 }
 body, html
 {
     width: 100%;
+    min-height:100vw!important;
     height: 100%;
     overflow: hidden;
 }
@@ -31,6 +33,7 @@ header
     position: fixed;
     background-color: #141414;
     width: 100%;
+    min-height:100vw!important;
     height: 64px;
     border-bottom: 2px solid #333;
     display: block;
@@ -64,7 +67,7 @@ header p.background{
     background-color: #141414;
     height:22px;
 }
-.iphone header{ height:80px;}
+.iphone header{ height:80px;min-height:100vw!important;}
 .iphone .animated-arrow {
     cursor: pointer;
     padding: 35px 35px 16px 0px;
