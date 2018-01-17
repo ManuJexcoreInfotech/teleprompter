@@ -28,8 +28,14 @@ $(".teleprompter").on('paste', function (e) {
     fontSize(true);
 })
 
-$(function () {
+function InterValFun(){
+     $("article .teleprompter").css("min-width","100vw");
+     $("header").css("min-width","100vw");
+}
 
+
+$(function () {
+    setInterval(function(){ InterValFun();  }, 3000);
     edit_mode_off();
 
     if (navigator.userAgent.match(/Android/i))
