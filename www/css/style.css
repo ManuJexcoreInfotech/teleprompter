@@ -32,8 +32,7 @@ header
 {
     position: fixed;
     background-color: #141414;
-    width: 100%; 
-    min-width: 100vw!important;  
+    width: 100%!important; 
     height: 64px;
     border-bottom: 2px solid #333;
     display: block;
