@@ -365,7 +365,7 @@ a.button.small.icon-pencil.remote_on{
     left: 25vw;
     width: 50vw;
     height: 50vh;
-    background-color: rgba(0,0,0,0.6);
+    background-color: transparent;
     z-index: 10;
     display: none;
 
@@ -522,7 +522,7 @@ a.button.small.icon-pencil.remote_on{
     
     width: 250px;
     
-	background: rgba(220, 220, 220, 0.85)
+	background: rgba(220, 220, 220, 0.95)
 }
 
 .dialog-header {
