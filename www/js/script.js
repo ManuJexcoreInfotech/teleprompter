@@ -91,7 +91,7 @@ $(function () {
     $('article .teleprompter').css({
         'padding-bottom': Math.ceil($(window).height() - $('header').height()) + 'px'
     });
-
+  
     // Create Font Size Slider
     $('.font_size').slider({
         min: 50,
